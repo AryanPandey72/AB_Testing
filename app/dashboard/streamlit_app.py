@@ -12,6 +12,8 @@ import requests
 import streamlit as st
 
 
+import sys
+
 @st.cache_resource
 def start_api_server() -> subprocess.Popen | None:
     def is_port_in_use(port: int) -> bool:
@@ -20,11 +22,11 @@ def start_api_server() -> subprocess.Popen | None:
 
     if not is_port_in_use(8000):
         process = subprocess.Popen(
-            ["python", "-m", "uvicorn", "app.api.main:app", "--host", "127.0.0.1", "--port", "8000"],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
+            [sys.executable, "-m", "uvicorn", "app.api.main:app", "--host", "127.0.0.1", "--port", "8000"],
+            stdout=sys.stdout,
+            stderr=sys.stderr,
         )
-        time.sleep(2)
+        time.sleep(3) # Give it an extra second to boot
         return process
     return None
 
