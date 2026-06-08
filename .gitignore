@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+data/processed/criteo_full.parquet
+data/interim/
+logs/
+*.db
+*.sqlite
+*.sqlite3
+criteo-uplift-v2.1.csv

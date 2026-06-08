@@ -1,0 +1,12 @@
+[project]
+name = "causal-bandit-engine"
+version = "0.1.0"
+description = "Causal inference and Thompson Sampling optimization engine backed by the Criteo uplift dataset."
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+

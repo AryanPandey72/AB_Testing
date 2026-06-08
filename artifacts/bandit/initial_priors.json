@@ -1,0 +1,26 @@
+{
+  "arms": [
+    {
+      "alpha": 1.3875176030562673,
+      "arm_id": 0,
+      "arm_name": "control",
+      "beta": 200.61248239694373,
+      "observed_conversion_rate": 0.0019375880152813366,
+      "observed_pulls": 2096937,
+      "observed_rewards": 4063
+    },
+    {
+      "alpha": 1.6178922134825928,
+      "arm_id": 1,
+      "arm_name": "treatment",
+      "beta": 200.38210778651742,
+      "observed_conversion_rate": 0.0030894610674129645,
+      "observed_pulls": 11882655,
+      "observed_rewards": 36711
+    }
+  ],
+  "prior_strength": 200.0,
+  "source": "criteo-uplift-v2.1.csv",
+  "target": "conversion",
+  "treatment": "treatment"
+}
